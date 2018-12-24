@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+   <div class="col-lg-12 col-md-6 col-sm-8 col-xs-10">
+     <h3>Dashborad</h3>
+     <div style="height: auto;width: 100%; border:1px solid red;margin:10px auto;">
+       <div class="row">
+         <div class="col-md-6" style="padding: 10px auto;">
+         <img src="assets/symb.png" class="img-responsive" style="height: 350px;width: 200px;">
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-primary" (click)="get_data()">Get Mocked Data</button>
+       
+          <table class="table table-striped" *ngIf="data">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Body</th>
+                  <th>PostID</th>
+                  </tr>
+                  
+              </thead>
+              <tbody >
+                <tr *ngFor="let datnum of data" [attr.data-index]="i" >
+                <td>{{datnum.id}}</td>
+                <td>{{datnum.body}} </td>
+                <td>{{datnum.postId}}</td>
+              </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+</div>
